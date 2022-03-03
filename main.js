@@ -16,117 +16,118 @@ let o = document.querySelector('#subtract')
 let p = document.querySelector('#add')
 let q = document.querySelector('#equals')
 let r = document.querySelector('#decimal')
-let gameOver = false;
+//let s = document.querySelector('#bracket')
+let t = document.querySelector('#percent')
+let u = document.querySelector('#delete')
+
 
 
 b.addEventListener('click', () => {
-    if (!gameOver) {
-        a.innerHTML += 7  
-    }   if(a.innerHTML.length === 12){
-        gameOver = true;
-    }
+    if (a.innerHTML.length <= 14) {
+        a.innerHTML += 7 
+    } 
+    
 })
 c.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += 6  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 d.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14){
         a.innerHTML += 8;  
-    }   if(a.innerHTML.length === 12){
-        gameOver = true;
-    }
+    }   
+        
 })
 e.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += 9  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 f.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += 4  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 g.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += 5  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 h.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += 1  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 i.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += 2  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 j.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += 3  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 k.addEventListener('click', () => {
-    if (!gameOver) {
-        a.innerHTML += 0  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    if (a.innerHTML.length <= 14) {
+        a.innerHTML += 0; 
+    } 
+    
+       
 })
 m.addEventListener('click', () => {
     a.innerHTML = '';
-    gameOver = false;
+    operation = false;
 })
 l.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += '/';  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 n.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += '*';  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 o.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += '-';  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 p.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += '+';  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 r.addEventListener('click', () => {
-    if (!gameOver) {
+    if (a.innerHTML.length <= 14) {
         a.innerHTML += '.';  
-    } if(a.innerHTML.length === 12){
-        gameOver = true;
-    }   
+    } 
+    
+       
 })
 q.addEventListener('click', () => {
     let equation = a.innerHTML;
@@ -137,4 +138,18 @@ q.addEventListener('click', () => {
     a.innerHTML = result
   } else
   a.innerHTML = result.toFixed(5);
+})
+t.addEventListener('click', () => {
+    let equation = a.innerHTML;
+  console.log(equation);
+  let result = eval(equation) / 100;
+  console.log(result);
+  if (result%1 === 0){
+    a.innerHTML = result
+  } else
+  a.innerHTML = result.toFixed(5);
+})
+u.addEventListener('click', () => {
+
+a.innerHTML = a.innerHTML.slice(0, -1)
 })
